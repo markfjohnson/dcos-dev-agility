@@ -1,16 +1,28 @@
 #!/usr/bin/env bash
+# create the necessary service accounts
+exec create-service-accounts.sh spark-dev, spark-dev-svc-accnt, spark-key, "Spark service Account"
+
+
+# TODO Create the Application groups for dept-a and dept-b for each of the necessary components
 dcos package install --yes dcos-enterprise-cli --cli
+# TODO Setup HDFS service account
 dcos package install --yes hdfs --options=hdfs_option.json
 dcos package install --yes marathon-lb
+# TODO Setup service account for cassandra
 dcos package install --yes cassandra
+#TODO Setup service account for Spark
+#TODO Setup spark history configuration
 dcos package install --yes spark --options=spark_options.json
 dcos marathon app add https://raw.githubusercontent.com/vishnu2kmohan/livy-dcos-docker/master/livy-marathon.json
 dcos marathon app add https://raw.githubusercontent.com/vishnu2kmohan/beakerx-dcos-docker/master/beakerx-marathon.json
 
-dcos marathon pod add metrics.json
-dcos marathon app add prometheus.json
-dcos marathon app add grafana.json
-dcos package install --yes postgresql
+dcos marathon pod add https://raw.githubusercontent.com/markfjohnson/dcos-j2ee-legacy-examples/master/Installation/metrics.json
+dcos marathon app add https://raw.githubusercontent.com/markfjohnson/dcos-j2ee-legacy-examples/master/Installation/prometheus.json
+dcos marathon app add https://raw.githubusercontent.com/markfjohnson/dcos-j2ee-legacy-examples/master/Installation/grafana.json
+
+# TODO Setup service account for mysql
+dcos package install --yes mysql
+#TODO Setup service account for kafka
 dcos package install --yes kafka
 
 echo "Setup security rules"
@@ -36,5 +48,7 @@ dcos security org groups grant dept-b dcos:adminrouter:service:marathon full
 dcos security org groups grant dept-b dcos:service:marathon:marathon:services:/dept-b full
 dcos security org groups grant dept-b dcos:adminrouter:package full
 
-# TODO
+# TODO build a script to identify the public node and export it to a variable
 ./find_public_node.sh
+
+# TODO setup quota setting scripts for the production services

@@ -4,7 +4,7 @@ from pyspark.sql import Row
 
 warehouseLocation="/"
 spark = SparkSession.builder.appName("SparkSessionHDFSExample").config("spark.sql.warehouse.dir", warehouseLocation).enableHiveSupport().getOrCreate()
-
+# TODO modify write portion to put the mouse inventory file into HDFS
 sc = spark.sparkContext
 values = sc.parallelize(range(1,10))
 values.saveAsTextFile("hdfs://hdfs/testfile")
