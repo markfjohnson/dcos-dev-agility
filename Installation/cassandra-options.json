@@ -1,0 +1,8 @@
+{
+  "service": {
+    "name": "cassandra-dev",
+    "user": "nobody",
+    "service_account": "cassandra-dev",
+    "service_account_secret": "cassandra-dev/cassandra-key"
+  }
+}

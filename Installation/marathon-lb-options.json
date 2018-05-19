@@ -1,0 +1,6 @@
+{
+  "marathon-lb": {
+    "name":"marathon-lb-dev",
+    "secret_name": "marathon-lb-dev/marathon-lb-key"
+  }
+}

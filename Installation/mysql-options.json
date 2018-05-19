@@ -1,0 +1,39 @@
+{
+  "service": {
+    "name": "mysql-dev",
+    "service_account": "mysql-dev",
+    "service_account_secret": "mysql-dev/mysql-key",
+    "user":"nobody"
+  },
+  "mysql": {
+    "cpus": 0.5,
+    "mem": 1024
+  },
+  "database": {
+    "name": "defaultdb",
+    "username": "admin",
+    "password": "password",
+    "root_password": "root"
+  },
+  "storage": {
+    "host_volume": "/tmp",
+    "persistence": {
+      "enable": false,
+      "volume_size": 256,
+      "external": {
+        "enable": false,
+        "volume_name": "mysql",
+        "provider": "dvdi",
+        "driver": "rexray"
+      }
+    }
+  },
+  "networking": {
+    "port": 3306,
+    "host_mode": false,
+    "external_access": {
+      "enable": false,
+      "external_access_port": 13306
+    }
+  }
+}

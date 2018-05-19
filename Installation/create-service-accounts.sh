@@ -1,26 +1,32 @@
 #!/usr/bin/env bash
+dcos security org service-accounts keypair spark-key.pem spark-key-pub.pem
+dcos security org service-accounts create -p spark-key_pub.pem -d "Spark Service Account" "spark-dev-svc-accnt"
+dcos security org service-accounts show spark-dev
+dcos security secrets create-sa-secret spark-key.pem spark-dev spark-dev/spark-key
 
-# parameters: service, service-account-name, key-base-name, description
-echo "0:"$0
-echo "1:"$1
-echo "2:"$2
-echo "3:"$3
-echo "4:"$4
-export SERVICE_NAME="spark-dev"
-export SVC_ACCNT="spark-dev-svc-accnt"
-export KEY_NAME="spark-key"
-export PRIV_KEY="spark-key.pem"
-export PUB_KEY="spark-key_pub.pem"
-export DESCRIPTION="Service Account"
-echo "A"
-dcos security org service-accounts keypair spark-key.pem spark-key-pub.pem 
-ls -lt
-dcos security org service-accounts create -p spark-key_pub.pem -d "Service Account" "spark-dev-svc-accnt"
-echo "C"
-dcos security org service-accounts show ${SVC_ACCNT}
-echo "D"
-dcos security secrets create-sa-secret ${KEY_NAME}.pem ${SVC_ACCNT} ${SERVICE_NAME}/${KEY_NAME}
-echo "E"
+# HDFS Service account
+dcos security org service-accounts keypair hdfs-key.pem hdfs-key-pub.pem
+dcos security org service-accounts create -p hdfs-key_pub.pem -d "HDFS Service Account" "hdfs-dev-svc-accnt"
+dcos security org service-accounts show hdfs-dev
+dcos security secrets create-sa-secret hdfs-key.pem hdfs-dev hdfs-dev/hdfs-key
+
+# kafka Service account
+dcos security org service-accounts keypair kafka-key.pem kafka-key-pub.pem
+dcos security org service-accounts create -p kafka-key_pub.pem -d "kafka Service Account" "kafka-dev-svc-accnt"
+dcos security org service-accounts show kafka-dev
+dcos security secrets create-sa-secret kafka-key.pem kafka-dev kafka-dev/kafka-key
+
+# cassandra Service account
+dcos security org service-accounts keypair cassandra-key.pem cassandra-key-pub.pem
+dcos security org service-accounts create -p cassandra-key_pub.pem -d "cassandra Service Account" "cassandra-dev-svc-accnt"
+dcos security org service-accounts show cassandra-dev
+dcos security secrets create-sa-secret cassandra-key.pem cassandra-dev cassandra-dev/cassandra-key
+
+# mysql Service account
+dcos security org service-accounts keypair mysql-key.pem mysql-key-pub.pem
+dcos security org service-accounts create -p mysql-key_pub.pem -d "mysql Service Account" "mysql-dev-svc-accnt"
+dcos security org service-accounts show mysql-dev
+dcos security secrets create-sa-secret mysql-key.pem mysql-dev mysql-dev/mysql-key
 
 dcos security secrets list /
 

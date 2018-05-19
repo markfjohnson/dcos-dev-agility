@@ -1,6 +1,6 @@
 {
   "service": {
-    "service_account": "spark-dev-svc-accnt",
+    "service_account": "spark-dev",
     "user": "nobody",
     "service_account_secret": "spark-dev/spark-key"
   }
