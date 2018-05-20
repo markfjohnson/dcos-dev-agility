@@ -1,0 +1,24 @@
+{
+  "id": "/python-app",
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "markfjohnson/dev2-python"
+    },
+    "portMappings": []
+  },
+  "cpus": 0.1,
+  "mem": 128,
+  "requirePorts": false,
+  "networks": [
+    {
+      "mode": "container/bridge"
+    }
+  ],
+  "healthChecks": [],
+  "fetch": [],
+  "constraints": [],
+  "cmd": "ls -lt"
+}
