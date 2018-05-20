@@ -5,7 +5,7 @@ import time
 kafka_url = "broker.kafka.l4lb.thisdcos.directory:9092"
 #kafka_url = "localhost:9092"
 topic_name = "example_topic"
-
+print(kafka_url)
 def acked(err, msg):
     if err is not None:
         print("Failed to deliver message: {0}: {1}"
