@@ -13,6 +13,7 @@ dcos package install --yes cassandra --options=casandra-options.json
 dcos package install --yes spark --options=spark_options.json
 dcos package install --yes mysql --options=mysql-options.json
 dcos package install --yes kafka --options=kafka-options.json
+dcos package install --yes jenkins
 
 dcos marathon app add https://raw.githubusercontent.com/vishnu2kmohan/livy-dcos-docker/master/livy-marathon.json
 dcos marathon app add https://raw.githubusercontent.com/vishnu2kmohan/beakerx-dcos-docker/master/beakerx-marathon.json

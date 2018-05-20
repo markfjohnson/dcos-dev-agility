@@ -1,6 +1,7 @@
 {
   "service": {
     "name": "kafka-dev",
+    "principal": "kafka-dev",
     "user": "nobody",
     "service_account": "kafka-dev",
     "service_account_secret": "kafka-dev/kafka-key",
