@@ -1,6 +1,7 @@
 {
   "id": "/test/python-app",
   "backoffFactor": 1.15,
+  "cmd": "python3 kafka_producer_example.py",
   "backoffSeconds": 1,
   "container": {
     "portMappings": [],
