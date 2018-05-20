@@ -7,7 +7,7 @@
 dcos package install --yes dcos-enterprise-cli --cli
 
 dcos package install --yes hdfs --options=hdfs_option-no-svc.json
-dcos package install --yes marathon-lb --options=marathon-lb-options.json
+dcos package install --yes marathon-lb
 dcos package install --yes cassandra --options=casandra-options.json
 ::TODO Setup spark history configuration
 dcos package install --yes spark
