@@ -2,8 +2,8 @@
 from kafka import KafkaProducer
 import time
 
-#kafka_url = "broker.kafka.l4lb.thisdcos.directory:9092"
-kafka_url = "localhost:9092"
+kafka_url = "broker.kafka.l4lb.thisdcos.directory:9092"
+#kafka_url = "localhost:9092"
 topic_name = "example_topic"
 
 def acked(err, msg):
