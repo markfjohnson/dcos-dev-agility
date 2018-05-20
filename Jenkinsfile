@@ -29,6 +29,19 @@ pipeline {
             }
         }
         stage('Deploy docker image to Marathon') {
+            steps {
+                echo "Starting application deployment"
+                script {
+                    marathon(
+                        url: 'http://marathon.mesos:8080',
+                        forceUpdate: true,
+                        id: '/test/python-app',
+                        docker: 'markfjohnson/dev-python',
+                        filename: 'conf/python_app.json',
+                        dockerForcePull: true)
+                }
+            }
+        }
 
     }
 }
