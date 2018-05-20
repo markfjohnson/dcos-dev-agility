@@ -2,7 +2,6 @@
   "id": "/test/python-app",
   "backoffFactor": 1.15,
   "backoffSeconds": 1,
-  "cmd": "ls -lt",
   "container": {
     "portMappings": [],
     "type": "MESOS",
