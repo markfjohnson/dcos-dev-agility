@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cfafbf85-adef-4b10-a915-e08107c1c868" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/Jenkinsfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/python_app.json" beforeDir="false" afterPath="$PROJECT_DIR$/conf/python_app.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Dockerfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="16">
@@ -43,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="python_app.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="python_app.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/conf/python_app.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+            <state relative-caret-position="624">
+              <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -179,9 +178,9 @@
         <option value="$PROJECT_DIR$/Installation/hdfs_option-no-svc.json" />
         <option value="$PROJECT_DIR$/Installation/spark_options-no-svc.json" />
         <option value="$PROJECT_DIR$/Installation/install-demo-no-svc.cmd" />
-        <option value="$PROJECT_DIR$/conf/python_app.json" />
         <option value="$PROJECT_DIR$/Jenkinsfile" />
         <option value="$PROJECT_DIR$/Dockerfile" />
+        <option value="$PROJECT_DIR$/conf/python_app.json" />
       </list>
     </option>
   </component>
@@ -328,7 +327,7 @@
       <workItem from="1526772534581" duration="4710000" />
       <workItem from="1526781064075" duration="2235000" />
       <workItem from="1526786743028" duration="2775000" />
-      <workItem from="1526818580024" duration="11943000" />
+      <workItem from="1526818580024" duration="12194000" />
     </task>
     <task id="LOCAL-00001" summary="basic demo flow documented and service account work started">
       <created>1526684422360</created>
@@ -358,11 +357,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526835691299</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Preparing the Jenkins pipeline">
+      <created>1526838143021</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1526838143021</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64423000" />
+    <option name="totallyTimeSpent" value="64674000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -770,13 +776,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/conf/python_app.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Jenkinsfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="736">
@@ -788,6 +787,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
           <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/python_app.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="39" column="1" selection-start-line="39" selection-start-column="1" selection-end-line="39" selection-end-column="1" />
         </state>
       </provider>
     </entry>
