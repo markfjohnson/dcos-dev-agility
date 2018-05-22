@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-
-git
+sudo dcos tunnel vpn --client=/usr/local/sbin/openvpn --user=core &
