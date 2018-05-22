@@ -1,7 +1,7 @@
 {
-  "id": "/test/python-app",
+  "id": "/dept-a/food-history",
   "backoffFactor": 1.15,
-  "cmd": "python3 kafka_producer_example.py",
+  "cmd": "python3 kafka-food-history-producer.py",
   "backoffSeconds": 1,
   "container": {
     "portMappings": [],

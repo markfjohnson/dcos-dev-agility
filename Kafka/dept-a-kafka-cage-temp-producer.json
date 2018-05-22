@@ -1,7 +1,7 @@
 {
-  "id": "/test/python-app",
+  "id": "/dept-a/kafka-cage-temp-producer",
   "backoffFactor": 1.15,
-  "cmd": "python3 kafka_producer_example.py",
+  "cmd": "python3 kafka-cage-temperatory-history-producer.py",
   "backoffSeconds": 1,
   "container": {
     "portMappings": [],
@@ -13,7 +13,7 @@
       "parameters": []
     }
   },
-  "cpus": 0.1,
+  "cpus": 0.2,
   "disk": 0,
   "instances": 1,
   "maxLaunchDelaySeconds": 3600,

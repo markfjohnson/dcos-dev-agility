@@ -28,7 +28,7 @@ pipeline {
                 }
             }
         }
-        stage('Deploy docker image to Marathon') {
+        stage('Deploy kafka-cage-temperature history producer to Marathon') {
             steps {
                 echo "Starting application deployment"
                 script {
