@@ -1,7 +1,7 @@
 {
   "id": "/dept-a/kafka-cage-temp-marathon",
   "backoffFactor": 1.15,
-  "cmd": "python3 kafka-cage-temperature-history-producer.py",
+  "cmd": "python3 /Kafka/kafka-cage-temperature-history-producer.py",
   "backoffSeconds": 1,
   "container": {
     "portMappings": [],

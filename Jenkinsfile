@@ -35,10 +35,18 @@ pipeline {
                     marathon(
                         url: 'http://marathon.mesos:8080',
                         forceUpdate: true,
-                        id: '/test/python-app',
+                        id: '/dept-a/kafka-cage-temp-marathon',
                         docker: 'markfjohnson/dev-python',
-                        filename: 'conf/python_app.json',
+                        filename: 'conf/kafka-cage-temp-marathon.json',
                         dockerForcePull: true)
+                    marathon(
+                        url: 'http://marathon.mesos:8080',
+                        forceUpdate: true,
+                        id: '/dept-a/kafka-food',
+                        docker: 'markfjohnson/dev-python',
+                        filename: 'conf/kafka-food-marathon.json',
+                        dockerForcePull: true)
+
                 }
             }
         }
